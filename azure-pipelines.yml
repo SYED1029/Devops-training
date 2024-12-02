@@ -1,5 +1,7 @@
-# Node.js Pipeline Example
-# Automatically triggered when code is pushed to the 'main' branch.
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 trigger:
 - main
@@ -8,24 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# Step 1: Install Node.js
-- task: UseNode@1
-  displayName: 'Install Node.js'
-  inputs:
-    version: '16.x' # Specify the Node.js version
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 
-# Step 2: Install dependencies
-- script: npm install
-  displayName: 'Install dependencies'
-
-# Step 3: Run tests
-- script: npm test
-  displayName: 'Run tests'
-
-# Step 4: Build the project
-- script: npm run build
-  displayName: 'Build the project'
-
-# Step 5: Deploy or additional steps
-- script: echo Deployment steps go here!
-  displayName: 'Placeholder for Deployment'
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
