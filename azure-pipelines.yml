@@ -9,7 +9,7 @@ pool:
 
 steps:
 # Step 1: Install Node.js
-- task: UseNode@2
+- task: UseNode@1
   displayName: 'Install Node.js'
   inputs:
     version: '16.x' # Specify the Node.js version
